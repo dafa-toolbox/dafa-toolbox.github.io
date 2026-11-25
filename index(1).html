@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1830">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><title>大發 AI 百寶箱</title>
+<style>
+:root{--navy:#0b1830;--navy2:#122747;--gold:#d9b66d;--gold2:#f2d99b;--ink:#17243a;--muted:#68758a;--paper:#f4f6fa;--line:#e2e7ef}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif}
+header{background:linear-gradient(135deg,#081426,#142d50);color:#fff;padding:22px 18px 26px;border-bottom:3px solid var(--gold)}
+.wrap{max-width:980px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:46px;height:46px;border:1px solid var(--gold);border-radius:14px;display:grid;place-items:center;color:var(--gold2);font-size:24px;background:#ffffff0b}
+h1{font-size:23px;letter-spacing:1px;margin:0}.tag{font-size:12px;color:#d8e0ed;margin-top:4px}.public{font-size:11px;border:1px solid #c7a85f;color:var(--gold2);padding:6px 9px;border-radius:99px;white-space:nowrap}
+.hero{padding:25px 0 4px}.eyebrow{color:var(--gold2);font-size:12px;letter-spacing:2px}.hero h2{font-size:25px;line-height:1.35;margin:8px 0}.hero p{color:#d2dbea;font-size:14px;line-height:1.7;margin:0;max-width:620px}
+main{padding:22px 16px 42px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:4px 0 14px}.section-head h3{margin:0;font-size:18px}.section-head span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid var(--line);border-radius:17px;padding:16px;text-align:left;min-height:150px;cursor:pointer;box-shadow:0 4px 14px #1227470a;transition:.15s}
+.card:active{transform:scale(.985)}.card:hover{border-color:#d4b56e}.ico{width:42px;height:42px;border-radius:13px;background:#f7f1e4;color:#9c762f;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.card strong{display:block;font-size:15px;margin-bottom:5px}.card small{display:block;color:var(--muted);font-size:12px;line-height:1.55}
+.pill{display:inline-block;margin-top:10px;background:#eef2f8;color:#53637b;border-radius:99px;padding:4px 8px;font-size:10px}
+.notice{margin-top:18px;padding:14px;border-radius:14px;background:#fffaf0;border:1px solid #efdfb9;color:#67532b;font-size:12px;line-height:1.65}
+.panel{display:none;background:white;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:18px;box-shadow:0 8px 25px #1227470c}
+.panel.active{display:block}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.panel h3{margin:0;font-size:19px}.back{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;color:#46546a}
+label{display:block;font-size:13px;font-weight:650;margin:14px 0 6px}input,textarea,select{width:100%;border:1px solid #d8dfeb;border-radius:11px;padding:12px;font:inherit;font-size:14px;background:#fff;color:var(--ink)}textarea{min-height:88px;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.btn{border:0;border-radius:11px;padding:11px 15px;font-weight:650;font-size:13px;cursor:pointer}.primary{background:var(--navy2);color:#fff}.secondary{background:#f1f3f7;color:#33435c}
+.output{display:none;margin-top:15px;background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:13px}.output pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.65 system-ui;margin:0;color:#24334b}
+footer{text-align:center;color:#7c8798;font-size:11px;padding:20px 12px 30px}
+@media(min-width:680px){header{padding:26px 28px 30px}.hero h2{font-size:32px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}main{padding:28px 24px 50px}.card{min-height:165px}}
+body{background:#08182e;color:#f5e5bf}.card{background:#142b46;color:#f3dda6;border-color:#66583d;min-height:155px}.card small,.section-head span{color:#c0cde0}.ico{background:#223b55;color:#e8c77d}.pill{background:#263d57;color:#e8c77d}.panel{background:#142b46;border-color:#66583d}.panel #panelDesc{color:#c0cde0!important}.primary{background:#d9b66d;color:#08182e}.notice{background:#142b46;color:#d2dfef;border-color:#66583d}.ai-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.ai-links a{color:#132747;background:#e8c77d;padding:10px;border-radius:9px;text-decoration:none;font-size:14px}.hero{text-align:center}.hero p{margin:auto}button:focus-visible,a:focus-visible{outline:3px solid #e8c77d;outline-offset:3px}</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div class="brand"><div class="mark">✦</div><div><h1>大發 AI 百寶箱</h1><div class="tag">AI 智慧生活・創意無限</div></div></div><div class="public">完全免費</div></div>
+  <div class="hero"><div class="eyebrow">YOUR PERSONAL AI TOOLBOX</div><h2>把想法交給 AI，<br>讓創意變成成果。</h2><p>選擇想使用的工具，依照步驟填寫需求。百寶箱會幫你整理成清楚的創作指令，方便複製到合適的 AI 工具繼續完成。</p></div>
+</div></header>
+<main class="wrap">
+  <div class="section-head"><h3>選擇創作工具</h3><span>六大免費工具</span></div>
+  <div class="grid" id="cards">
+    <button class="card" data-tool="song"><div class="ico">♫</div><strong>AI 心意成歌</strong><small>把祝福、回憶與心意整理成專屬歌曲創作指令。</small><span class="pill">音樂創作</span></button>
+    <button class="card" data-tool="realty"><div class="ico">⌂</div><strong>房仲 AI 小幫手</strong><small>整理物件特色，產生房屋銷售文案與社群貼文。</small><span class="pill">房仲工作</span></button>
+    <button class="card" data-tool="greeting"><div class="ico">✿</div><strong>AI 祝福圖卡</strong><small>規劃日安、晚安、生日及節慶圖卡的生成指令。</small><span class="pill">圖片創作</span></button>
+    <button class="card" data-tool="photo"><div class="ico">▧</div><strong>房屋照片助手</strong><small>整理修圖需求，強調保留原始格局、家具與設備。</small><span class="pill">影像整理</span></button>
+    <button class="card" data-tool="docs"><div class="ico">▤</div><strong>AI 文件助手</strong><small>把資料整理、摘要、教學內容或企劃需求轉成明確指令。</small><span class="pill">文件效率</span></button>
+    <button class="card" data-tool="free"><div class="ico">✧</div><strong>AI 自由創作</strong><small>自行描述任何想法，建立可複製的 AI 任務指令。</small><span class="pill">自由應用</span></button>
+  </div>
+  <div class="panel" id="panel">
+    <div class="panel-head"><h3 id="panelTitle">工具</h3><button class="back" id="back">← 返回工具列表</button></div>
+    <p id="panelDesc" style="color:#68758a;font-size:13px;line-height:1.6;margin:0"></p>
+    <div id="fields"></div>
+    <div class="actions"><button class="btn primary" id="generate">整理我的 AI 指令</button><button class="btn secondary" id="reset">清除內容</button></div>
+    <div class="output" id="output"><div style="font-weight:700;font-size:13px;margin-bottom:8px">已整理好的指令</div><pre id="result"></pre><div class="actions"><button class="btn primary" id="copy">複製指令</button></div></div>
+  </div>
+  <div class="notice"><strong>使用方式：</strong>選擇工具 → 填寫需求 → 生成並複製指令 → 開啟自己的 AI 平台並貼上。本站不串接 AI、不收費、不要求登入，填寫內容不會由本站上傳。外部 AI 平台可能有登入、額度或收費限制；請勿輸入不必要的個資。<div class="ai-links"><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a><a href="https://www.qianwen.com/" target="_blank" rel="noopener noreferrer">千問</a><a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Suno</a></div><p>加入手機主畫面：正式上線後，Android Chrome 選單 → 加到主畫面；iPad Safari 分享 → 加入主畫面。</p></div>
+</main>
+<footer>大發 AI 百寶箱 · 免費指令工具 V1.0</footer>
+<script>
+const config={
+song:{title:"AI 心意成歌",desc:"先填寫送禮對象與想傳達的心意，產生歌曲創作指令。歌曲生成可再交由 ChatGPT 與音樂平台完成。",fields:[["對象／稱呼","例如：爸爸、太太、老朋友"],["彼此關係","例如：家人、伴侶、同事、朋友"],["想表達的心意","想感謝、祝福或說些什麼？"],["共同回憶","請描述一件難忘的小故事"],["歌曲風格","例如：溫暖抒情、流行、民謠、Rap"],["其他要求","例如：繁體中文、男聲、節奏明亮"]]},
+realty:{title:"房仲 AI 小幫手",desc:"輸入物件基本資料與賣點，整理成房屋銷售文案指令。刊登前請自行核對坪數、屋齡、價格及相關事實。",fields:[["物件類型","例如：電梯大樓、透天、店面"],["地點／生活圈","請填行政區或附近地標，避免填入不必要的個資"],["坪數／格局","例如：建坪 38 坪、3 房 2 廳 2 衛"],["開價／屋齡","請填實際資料"],["物件特色","採光、交通、學區、裝潢、停車等"],["文案用途","例如：591、Facebook、LINE 客戶介紹"]]},
+greeting:{title:"AI 祝福圖卡",desc:"整理圖卡主題、文字與畫面需求，產生圖片生成指令。",fields:[["圖卡主題","例如：日安、晚安、生日、中秋"],["畫面主角／場景","例如：花園、山景、城市夜景"],["圖中文字","請填要出現的繁體中文"],["視覺風格","例如：寫實攝影、典雅、喜氣、簡約"],["尺寸／用途","例如：手機直式、LINE 分享、3:4"]]},
+photo:{title:"房屋照片助手",desc:"先描述要處理的照片與指定項目。預設以保留原始空間為原則，不擅自更動格局。",fields:[["照片內容","例如：客廳、臥室、浴室、外觀"],["指定處理項目","例如：移除紙箱、校正水平、改善亮度"],["必須保留","例如：家具、家電、門窗、地板及原始格局"],["其他限制","例如：不可新增家具、不可改變空間比例"]]},
+docs:{title:"AI 文件助手",desc:"把零散資料整理成摘要、教學、報告或企劃的工作指令。",fields:[["資料／主題","這份文件主要談什麼？"],["希望完成的成果","例如：摘要、教學講義、簡報大綱、企劃"],["閱讀對象","例如：一般民眾、客戶、同事、初學者"],["格式與語氣","例如：繁體中文、白話、條列、表格"],["特別注意","需要保留的資訊、限制或資料來源"]]},
+free:{title:"AI 自由創作",desc:"用自己的話描述任務，百寶箱幫你整理成結構清楚的 AI 指令。",fields:[["想完成什麼事情","請盡量具體描述你的目標"],["背景資料","提供 AI 需要知道的背景"],["希望輸出格式","例如：文章、表格、圖片指令、步驟"],["限制與偏好","例如：字數、語言、風格、不可做的事"]]}
+};
+const rules={song:"請提供原創繁體中文歌詞、歌名、段落結構及可貼入音樂生成工具的曲風描述。",realty:"請提供吸引人的標題、物件賣點及行動呼籲；不可捏造坪數、屋齡、價格、學區或交通資訊。",greeting:"請提供可直接用於圖片生成的完整提示詞，精確保留指定繁體中文字，不增加未指定文字。",photo:"若需修圖，請先要求上傳原始照片。只移除明確指定物件，自然補齊周圍材質；保留家具、家電、裝潢、門窗、設備、格局及空間比例，不擅自增添物件。",docs:"依指定格式整理資料，區分原文事實與推論，缺少附件時請先要求提供。",free:"依指定目標提供可執行成果，必要時先釐清需求。"};
+let current="";
+const $=id=>document.getElementById(id);
+function openTool(key){current=key;const c=config[key];$("panelTitle").textContent=c.title;$("panelDesc").textContent=c.desc;$("fields").innerHTML="";
+c.fields.forEach((f,i)=>{const id="f"+i;const wrap=document.createElement("div");const label=document.createElement("label");label.htmlFor=id;label.textContent=f[0];const input=document.createElement(i===2||f[0].includes("回憶")||f[0].includes("特色")||f[0].includes("限制")||f[0].includes("心意")||f[0].includes("事情")||f[0].includes("背景")?"textarea":"input");input.id=id;input.placeholder=f[1];wrap.append(label,input);$("fields").append(wrap)});
+$("output").style.display="none";$("panel").classList.add("active");$("cards").style.display="none";$("panel").scrollIntoView({behavior:"smooth",block:"start"});}
+document.querySelectorAll(".card").forEach(b=>b.addEventListener("click",()=>openTool(b.dataset.tool)));
+$("back").onclick=()=>{$("panel").classList.remove("active");$("cards").style.display="grid";$("output").style.display="none";current="";};
+$("reset").onclick=()=>{document.querySelectorAll("#fields input,#fields textarea").forEach(x=>x.value="");$("output").style.display="none";};
+$("generate").onclick=()=>{const c=config[current];if(!c.fields.some((f,i)=>$("f"+i).value.trim())){alert("請至少填寫一項需求");return;}let lines=["請依照以下資料，協助我完成「"+c.title+"」任務。","請使用繁體中文，內容清楚、自然、實用；資料不足時先提出問題，不要自行捏造事實。",""];c.fields.forEach((f,i)=>{const v=$("f"+i).value.trim();if(v)lines.push(f[0]+"："+v)});lines.push("",rules[current],"請先理解需求，再提供完整成果；若涉及事實、價格或權益，請標示需要核實的部分。");$("result").textContent=lines.join("\n");$("output").style.display="block";};
+$("copy").onclick=async()=>{const t=$("result").textContent;try{await navigator.clipboard.writeText(t);$("copy").textContent="已複製！";setTimeout(()=>$("copy").textContent="複製指令",1600)}catch(e){const r=document.createRange();r.selectNode($("result"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("copy").textContent="請長按選取複製";}};
+if(location.protocol==='https:' && 'serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}</script>
+</body></html>
